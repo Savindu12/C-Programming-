@@ -11,6 +11,21 @@
 //\n - New Line   dasdasda
   //              asdasdasd
 
+/*
+int main()
+{
+
+    char string[]  = "Welcome to C programming.";
+
+    printf ("Hello, World! \n");
+    printf("%s",string);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+  //  return 0;
+//}
+ // */
+
+
 //int main ()
 //{
   //  printf("\t    * \n");
@@ -138,6 +153,9 @@ END */
 
 
 /*
+
+// Single Dimensional Array
+
 int main()
 {
     // Array Declaration
@@ -188,6 +206,7 @@ int main ()
 
 } */
 
+/*
 int main()
 {
 
@@ -197,15 +216,215 @@ int main()
     printf("%s",ssam);
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    return 0;
+  //  return 0;
+//}
+
+//*/
+
+
+// Multi Dimensional Array
+
+//Matrix
+   // C1  C2  C3
+  //  1   2   3 row 1
+
+  //  2   3   4 row 2
+
+
+    //int Array_Name [2][3]
+/*
+int main ()
+{
+    int matrix[2][3], row, column;
+    //Data Input for the multi value array
+    for (row=0; row<2; row++)
+    {
+        for (column=0; column<3; column++)
+        {
+            printf ("Enter value for Row Number %d, Column Number %d :",row+1,column+1);
+            scanf ("%d",&matrix[row][column]);
+        }
+    }
+
+    // Display the values in the multi array
+
+    for (row=0; row<2; row++)
+    {
+        for (column=0; column<3; column++)
+        {
+            printf ("%d \t ",matrix[row][column]);
+        }
+        printf ("\n");
+    }
+} */
+
+/*
+int main()
+{
+  float a[2][2], b[2][2], result[2][2];
+
+  // Taking input using nested for loop
+  printf("Enter elements of 1st matrix\n");
+  for (int i = 0; i < 2; ++i)
+    for (int j = 0; j < 2; ++j)
+    {
+      printf("Enter a%d%d: ", i + 1, j + 1);
+      scanf("%f", &a[i][j]);
+    }
+
+  // Taking input using nested for loop
+  printf("Enter elements of 2nd matrix\n");
+  for (int i = 0; i < 2; ++i)
+    for (int j = 0; j < 2; ++j)
+    {
+      printf("Enter b%d%d: ", i + 1, j + 1);
+      scanf("%f", &b[i][j]);
+    }
+
+  // adding corresponding elements of two arrays
+  for (int i = 0; i < 2; ++i) //row
+    for (int j = 0; j < 2; ++j) // Column
+    {
+      result[i][j] = a[i][j] + b[i][j];
+    }
+
+  // Displaying the sum
+  printf("\nSum Of Matrix: \n");
+
+  for (int i = 0; i < 2; ++i)
+  {
+      for (int j = 0; j < 2; ++j)
+        {
+            printf("%.1f \t", result[i][j]);
+        }
+        printf("\n");
+  }
+
+  return 0;
 }
 
+*/
 
+// No return type  No Parameters
+/*
+void print()
+{
+    printf("Hello World!");
+}
 
+int main()
+{
+    print();
+} */
 
+// No return type  With Parameters
+/*
+void print (int num1, int num2, int num3)
+{
+    int sum;
+    sum= num1+num2+num3;
+    printf("Sum value is: %d",sum);
+}
 
+int main()
+{
+    print(2,3,4);
+}
+*/
 
+// With return type No parameters
+/*
+int BirthYear ()
+{
+    int BirthYear, Age;
+    printf("Enter your BirthYear: ");
+    scanf ("%d",&BirthYear);
+    Age = 2022 - BirthYear;
+    return Age;
+}
 
+int main ()
+{
+    printf("Your Age is: %d ",BirthYear());
+}
+*/
+
+// With return type with parameters
+/*
+int Highest_Num (int num1,int num2, int num3)
+{
+    int Highest_Num;
+    if(num1>num2 && num1>num3)
+    {
+        Highest_Num = num1;
+    }
+    else if(num2>num1 && num2>num3)
+    {
+        Highest_Num = num2;
+    }
+    else
+    {
+        Highest_Num = num3;
+    }
+
+    return Highest_Num;
+}
+
+int main ()
+{
+    int num1,num2,num3;
+    printf("Enter a value for Num1: ");
+    scanf("%d",&num1);
+    printf("Enter a value for Num2: ");
+    scanf("%d",&num2);
+    printf("Enter a value for Num3: ");
+    scanf("%d",&num3);
+
+    printf ("Highest Value is: %d \n ",Highest_Num(num1,num2,num3));
+}
+*/
+
+// Pointers
+/*
+int main ()
+{
+    int x = 10;
+    int *p;
+
+    p = &x;
+
+    printf("The value of X is: %d \n",x);
+    printf("The memory address off x is: %p",p);
+
+    int temp
+    temp = *x;
+    *x = *y;
+    *y = temp
+
+    prinl () // Syntax Error
+    x=(y)/(5+3); // Semantic Error
+}
+*/
+
+//Fibonacci Sequence
+// 0 1 1 2 3 5 8 13
+
+int main()
+{
+    int num1=0,num2=1,num3,range;
+
+    printf("Enter the range for sequence: ");
+    scanf("%d",&range);
+
+    for (int i=0; i<range; i++)
+    {
+        num3 = num1 + num2;
+        printf("%d \t",num3);
+        num1 = num2;
+        num2 = num3;
+
+    }
+}
 
 
 
